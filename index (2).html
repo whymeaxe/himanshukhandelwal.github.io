@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Strategic Cybersecurity Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --crimson: #8B0000;
+    --crimson-light: #A50000;
+    --black: #0a0a0a;
+    --near-black: #1a1a1a;
+    --dark-gray: #444;
+    --mid-gray: #777;
+    --light-gray: #bbb;
+    --off-white: #f8f7f5;
+    --white: #ffffff;
+    --border: #e5e3df;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--white); }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 48px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  nav.scrolled { border-bottom-color: var(--border); }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .nav-logo::before {
+    content: '';
+    width: 10px; height: 10px;
+    background: var(--crimson);
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .nav-contact {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-contact:hover { color: var(--crimson); }
+
+  /* SECTIONS */
+  section { min-height: 100vh; }
+
+  /* ── INTRO ── */
+  .label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--crimson);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.3s forwards;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 400;
+    line-height: 1.22;
+    color: var(--black);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+
+  .hero-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--mid-gray);
+    max-width: 420px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.7s forwards;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 64px;
+    margin-top: 56px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.9s forwards;
+  }
+  .stat-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1;
+  }
+
+  /* ── HERO TAGLINE ── */
+  #tagline {
+    min-height: auto;
+    padding: 120px 72px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .tagline-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(72px, 11vw, 160px);
+    font-weight: 400;
+    line-height: 0.92;
+    color: var(--black);
+  }
+  .tagline-text .accent { color: var(--crimson); font-style: italic; display: block; }
+  .tagline-text .line { display: block; }
+
+  /* ── INTRO BELOW TAGLINE ── */
+  #intro-below {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 57% 43%;
+    border-top: 1px solid var(--border);
+    margin-top: 80px;
+  }
+  .intro-image-wrap {
+    overflow: hidden;
+    background: #1a1a1a;
+    min-height: 520px;
+  }
+  .intro-image-placeholder {
+    width: 100%; height: 100%;
+    min-height: 520px;
+    background: linear-gradient(160deg,#2a2a2a 0%,#1a1a1a 40%,#111 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px 80px 80px;
+    border-left: 1px solid var(--border);
+  }
+  .intro-content .label { animation: none; opacity: 1; }
+
+  /* ── FINDINGS ── */
+  #findings {
+    padding: 120px 72px;
+    min-height: auto;
+  }
+  .findings-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .add-finding-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--white);
+    background: var(--crimson);
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .add-finding-btn:hover { background: var(--crimson-light); transform: translateY(-1px); }
+
+  .finding-form {
+    display: none;
+    border: 1px solid var(--border);
+    padding: 48px;
+    margin-bottom: 48px;
+    background: var(--off-white);
+  }
+  .finding-form.open { display: block; }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+  }
+  .form-input, .form-select, .form-textarea {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--crimson); }
+  .form-textarea { resize: vertical; min-height: 100px; }
+  .form-actions { display: flex; gap: 16px; margin-top: 8px; }
+  .btn-submit {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--white);
+    background: var(--black);
+    border: none;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover { background: var(--crimson); }
+  .btn-cancel {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--mid-gray);
+    background: none;
+    border: 1px solid var(--border);
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-cancel:hover { color: var(--black); border-color: var(--black); }
+
+  .findings-list { border-top: 1px solid var(--border); }
+  .finding-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 180px 80px;
+    align-items: start;
+    gap: 0 48px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .finding-num {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    color: var(--light-gray);
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+  }
+  .finding-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .finding-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--mid-gray);
+    margin-bottom: 14px;
+    max-width: 560px;
+  }
+  .finding-date {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--light-gray);
+  }
+  .finding-severity {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    padding-top: 4px;
+  }
+  .severity-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .sev-critical .severity-dot { background: #8B0000; }
+  .sev-critical { color: #8B0000; }
+  .sev-high .severity-dot { background: #c45c00; }
+  .sev-high { color: #c45c00; }
+  .sev-medium .severity-dot { background: #b89000; }
+  .sev-medium { color: #b89000; }
+  .sev-low .severity-dot { background: #2d7a3a; }
+  .sev-low { color: #2d7a3a; }
+  .finding-delete {
+    background: none;
+    border: none;
+    color: var(--light-gray);
+    cursor: pointer;
+    font-size: 18px;
+    padding-top: 2px;
+    transition: color 0.2s;
+    text-align: right;
+  }
+  .finding-delete:hover { color: var(--crimson); }
+  .findings-empty {
+    padding: 80px 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--light-gray);
+    font-style: italic;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── SERVICES ── */
+  #services {
+    padding: 0 72px;
+    min-height: auto;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 400;
+    color: var(--black);
+    padding: 80px 0 60px;
+  }
+
+  .service-list { border-top: 1px solid var(--border); }
+
+  .service-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 48px;
+    align-items: start;
+    gap: 0 48px;
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .service-item:hover .service-arrow { opacity: 1; transform: translate(0, 0); }
+  .service-item:hover .service-name { color: var(--crimson); }
+
+  .service-num {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--light-gray);
+    letter-spacing: 0.05em;
+    padding-top: 8px;
+  }
+  .service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.5vw, 34px);
+    font-weight: 400;
+    line-height: 1.25;
+    transition: color 0.25s;
+  }
+  .service-right { padding-top: 4px; }
+  .service-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--mid-gray);
+    margin-bottom: 16px;
+    max-width: 480px;
+  }
+  .service-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--crimson);
+  }
+  .service-tag::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--crimson);
+    display: block;
+  }
+  .service-arrow {
+    font-size: 18px;
+    color: var(--crimson);
+    opacity: 0;
+    transform: translate(-6px, 6px);
+    transition: opacity 0.25s, transform 0.25s;
+    padding-top: 6px;
+    align-self: start;
+  }
+
+  /* ── CASE STUDIES ── */
+  #cases {
+    padding: 120px 72px;
+    min-height: auto;
+  }
+  .cases-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  .case-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0 80px;
+    padding: 72px 0;
+    border-top: 1px solid var(--border);
+  }
+  .case-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .case-left { }
+  .case-year {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--light-gray);
+    margin-bottom: 16px;
+  }
+  .case-client {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 2.8vw, 38px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .case-protected {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--crimson);
+    line-height: 1;
+  }
+  .case-protected-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-top: 6px;
+  }
+
+  .case-right { display: flex; flex-direction: column; gap: 0; }
+  .case-field {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-field:first-child { border-top: 1px solid var(--border); }
+  .case-field-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-bottom: 12px;
+  }
+  .case-field-text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--near-black);
+    max-width: 560px;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    padding: 120px 72px 80px;
+    min-height: auto;
+  }
+  .contact-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7.5vw, 120px);
+    font-weight: 400;
+    line-height: 0.95;
+    color: var(--black);
+    margin-bottom: 80px;
+    max-width: 900px;
+  }
+
+  .contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+    align-items: end;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-intro {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--mid-gray);
+    max-width: 360px;
+    margin-bottom: 48px;
+  }
+
+  .contact-links { display: flex; flex-direction: column; gap: 20px; }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--crimson); }
+  .contact-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .contact-right { text-align: right; }
+  .engagement-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--light-gray);
+    margin-bottom: 12px;
+  }
+  .engagement-price {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1;
+  }
+
+  /* FOOTER */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 72px;
+  }
+  .footer-copy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--light-gray);
+  }
+  .footer-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--light-gray);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.9s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.35s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 28px; }
+    #hero { grid-template-columns: 1fr; }
+    .hero-image-wrap { height: 60vw; }
+    .hero-content { padding: 60px 28px; }
+    #tagline { padding: 80px 28px 0; }
+    #intro-below { grid-template-columns: 1fr; }
+    .intro-image-wrap { min-height: 60vw; }
+    .intro-image-placeholder { min-height: 60vw; }
+    .intro-content { padding: 60px 28px; border-left: none; border-top: 1px solid var(--border); }
+    #findings { padding: 80px 28px; }
+    .findings-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .finding-item { grid-template-columns: 48px 1fr; }
+    .finding-delete { position: absolute; top: 40px; right: 0; }
+    .form-grid { grid-template-columns: 1fr; }
+    #services { padding: 0 28px; }
+    .service-item { grid-template-columns: 48px 1fr; grid-template-rows: auto auto; }
+    .service-right { grid-column: 2; }
+    .service-arrow { display: none; }
+    #cases { padding: 80px 28px; }
+    .case-item { grid-template-columns: 1fr; gap: 48px; }
+    #contact { padding: 80px 28px 60px; }
+    .contact-body { grid-template-columns: 1fr; }
+    .contact-right { text-align: left; margin-top: 40px; }
+    footer { padding: 28px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">PORTFOLIO</a>
+  <a href="#contact" class="nav-contact">CONTACT</a>
+</nav>
+
+<!-- HERO — full-screen split removed; tagline is now the hero -->
+<!-- TAGLINE (full viewport, stacked words) -->
+<section id="tagline" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+  <div class="tagline-text reveal" style="padding:0 72px;">
+    <span class="line">Strategic</span>
+    <span class="accent">Cyber</span>
+    <span class="line">Defense</span>
+  </div>
+</section>
+
+<!-- INTRO BELOW TAGLINE -->
+<section id="intro-below">
+  <div class="intro-image-wrap">
+    <div class="intro-image-placeholder">
+      <svg viewBox="0 0 200 280" width="200" style="opacity:0.15">
+        <ellipse cx="100" cy="90" rx="55" ry="65" fill="#fff"/>
+        <rect x="30" y="160" width="140" height="200" rx="8" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+  <div class="intro-content">
+    <div class="label">INTRODUCTION</div>
+    <h1 class="hero-headline" style="opacity:1;animation:none;">Protecting critical infrastructure for organizations that cannot afford compromise.</h1>
+    <p class="hero-body" style="opacity:1;animation:none;">I deliver white-glove cybersecurity consulting to Fortune 500 companies, government agencies, and high-net-worth individuals who require discretion and uncompromising security.</p>
+    <p class="hero-body" style="margin-bottom:0;opacity:1;animation:none;">My approach combines advanced penetration testing, zero-trust architecture design, and strategic advisory services tailored to each client's unique threat landscape.</p>
+    <div class="hero-stats" style="opacity:1;animation:none;">
+      <div>
+        <div class="stat-label">ASSETS PROTECTED</div>
+        <div class="stat-value">$3.2B+</div>
+      </div>
+      <div>
+        <div class="stat-label">RETENTION RATE</div>
+        <div class="stat-value">100%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 class="section-title reveal">Services</h2>
+  <div class="service-list">
+
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <div class="service-name">Executive Threat Assessment</div>
+      <div class="service-right">
+        <p class="service-desc">Comprehensive analysis of digital exposure, physical security integration, and executive protection protocols.</p>
+        <div class="service-tag">BOARD-LEVEL BRIEFINGS, C-SUITE PROTECTION</div>
+      </div>
+      <div class="service-arrow">↗</div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <div class="service-name">Infrastructure Penetration Testing</div>
+      <div class="service-right">
+        <p class="service-desc">Advanced persistent threat simulation, red team operations, and vulnerability assessment across cloud and on-premise systems.</p>
+        <div class="service-tag">ENTERPRISE NETWORKS, CRITICAL SYSTEMS</div>
+      </div>
+      <div class="service-arrow">↗</div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <div class="service-name">Zero-Trust Architecture Design</div>
+      <div class="service-right">
+        <p class="service-desc">Strategic implementation of least-privilege access models, microsegmentation, and continuous verification frameworks.</p>
+        <div class="service-tag">FULL ENTERPRISE TRANSFORMATION</div>
+      </div>
+      <div class="service-arrow">↗</div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <div class="service-name">Incident Response &amp; Forensics</div>
+      <div class="service-right">
+        <p class="service-desc">Rapid containment, root cause analysis, and recovery orchestration for security breaches and advanced persistent threats.</p>
+        <div class="service-tag">24/7 EMERGENCY RESPONSE AVAILABILITY</div>
+      </div>
+      <div class="service-arrow">↗</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="cases-header reveal">
+    <div>
+      <div class="label" style="margin-bottom:16px">SELECTED WORK</div>
+      <h2 class="section-title" style="padding:0;font-size:clamp(48px,6vw,88px)">Case Studies</h2>
+    </div>
+  </div>
+
+  <div class="case-item reveal">
+    <div class="case-left">
+      <div class="case-year">2024</div>
+      <div class="case-client">Global Financial Services</div>
+      <div class="case-protected">$1.4B</div>
+      <div class="case-protected-label">PROTECTED</div>
+    </div>
+    <div class="case-right">
+      <div class="case-field">
+        <div class="case-field-label">CHALLENGE</div>
+        <div class="case-field-text">Post-merger security integration across 47 international offices</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">APPROACH</div>
+        <div class="case-field-text">Zero-downtime migration to unified security architecture with AI-driven threat detection</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">RESULT</div>
+        <div class="case-field-text">Zero breaches during 18-month integration, 40% reduction in security incidents</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-item reveal reveal-delay-1">
+    <div class="case-left">
+      <div class="case-year">2023</div>
+      <div class="case-client">Federal Agency Infrastructure</div>
+      <div class="case-protected">$890M</div>
+      <div class="case-protected-label">PROTECTED</div>
+    </div>
+    <div class="case-right">
+      <div class="case-field">
+        <div class="case-field-label">CHALLENGE</div>
+        <div class="case-field-text">Legacy system modernization with classified data compartmentalization requirements</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">APPROACH</div>
+        <div class="case-field-text">Zero-trust architecture deployment with multi-layer verification and air-gap protocols</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">RESULT</div>
+        <div class="case-field-text">Full compliance achieved. Passed all federal security audits with commendation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-item reveal reveal-delay-2">
+    <div class="case-left">
+      <div class="case-year">2022</div>
+      <div class="case-client">Energy Sector Consortium</div>
+      <div class="case-protected">$920M</div>
+      <div class="case-protected-label">PROTECTED</div>
+    </div>
+    <div class="case-right">
+      <div class="case-field">
+        <div class="case-field-label">CHALLENGE</div>
+        <div class="case-field-text">Nation-state threat actors targeting SCADA systems across 12 power generation facilities</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">APPROACH</div>
+        <div class="case-field-text">Continuous red team operations, OT/IT network segmentation, and threat intelligence integration</div>
+      </div>
+      <div class="case-field">
+        <div class="case-field-label">RESULT</div>
+        <div class="case-field-text">Three active intrusion attempts neutralized. Infrastructure hardened against APT classification threats</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- MY FINDINGS -->
+<section id="findings">
+  <div class="findings-header reveal">
+    <div>
+      <div class="label" style="margin-bottom:16px;animation:none;opacity:1;">FIELD INTELLIGENCE</div>
+      <h2 class="section-title" style="padding:0;">My Findings</h2>
+    </div>
+    <button class="add-finding-btn" onclick="toggleForm()">+ ADD FINDING</button>
+  </div>
+
+  <!-- Add Finding Form -->
+  <div class="finding-form" id="finding-form">
+    <div class="form-grid">
+      <div class="form-group">
+        <label class="form-label">FINDING TITLE</label>
+        <input type="text" class="form-input" id="f-title" placeholder="e.g. Unpatched RCE in VPN Gateway">
+      </div>
+      <div class="form-group">
+        <label class="form-label">SEVERITY</label>
+        <select class="form-select" id="f-severity">
+          <option value="critical">CRITICAL</option>
+          <option value="high">HIGH</option>
+          <option value="medium">MEDIUM</option>
+          <option value="low">LOW</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">CLIENT / TARGET</label>
+        <input type="text" class="form-input" id="f-client" placeholder="e.g. Financial Institution A">
+      </div>
+      <div class="form-group">
+        <label class="form-label">DATE</label>
+        <input type="date" class="form-input" id="f-date">
+      </div>
+      <div class="form-group full">
+        <label class="form-label">DESCRIPTION</label>
+        <textarea class="form-textarea" id="f-desc" placeholder="Describe the vulnerability, attack vector, and impact..."></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-submit" onclick="addFinding()">RECORD FINDING</button>
+      <button class="btn-cancel" onclick="toggleForm()">CANCEL</button>
+    </div>
+  </div>
+
+  <div class="findings-list" id="findings-list">
+    <div class="findings-empty" id="findings-empty">No findings recorded yet. Add your first finding above.</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="contact-headline reveal">Let's discuss your security requirements</h2>
+  <div class="contact-body reveal">
+    <div>
+      <p class="contact-intro">I work with a highly selective client base to ensure each engagement receives dedicated focus and delivers measurable security outcomes.</p>
+      <div class="contact-links">
+        <a href="mailto:consulting@securityelite.com" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          consulting@securityelite.com
+        </a>
+        <a href="#" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="engagement-label">ENGAGEMENT INVESTMENT</div>
+      <div class="engagement-price">From $75,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2026 CONFIDENTIAL</div>
+  <div class="footer-tag">STRATEGIC CYBERSECURITY CONSULTING</div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Findings
+  let findings = [];
+
+  function toggleForm() {
+    const form = document.getElementById('finding-form');
+    form.classList.toggle('open');
+    if (form.classList.contains('open')) {
+      document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+      document.getElementById('f-title').focus();
+    }
+  }
+
+  function addFinding() {
+    const title = document.getElementById('f-title').value.trim();
+    const severity = document.getElementById('f-severity').value;
+    const client = document.getElementById('f-client').value.trim();
+    const date = document.getElementById('f-date').value;
+    const desc = document.getElementById('f-desc').value.trim();
+
+    if (!title) { document.getElementById('f-title').focus(); return; }
+
+    findings.unshift({ title, severity, client, date, desc, id: Date.now() });
+    renderFindings();
+
+    // Reset
+    document.getElementById('f-title').value = '';
+    document.getElementById('f-client').value = '';
+    document.getElementById('f-desc').value = '';
+    document.getElementById('f-severity').value = 'critical';
+    document.getElementById('finding-form').classList.remove('open');
+  }
+
+  function deleteFinding(id) {
+    findings = findings.filter(f => f.id !== id);
+    renderFindings();
+  }
+
+  function renderFindings() {
+    const list = document.getElementById('findings-list');
+    const empty = document.getElementById('findings-empty');
+
+    if (findings.length === 0) {
+      list.innerHTML = '<div class="findings-empty" id="findings-empty">No findings recorded yet. Add your first finding above.</div>';
+      return;
+    }
+
+    const sevLabel = { critical: 'CRITICAL', high: 'HIGH', medium: 'MEDIUM', low: 'LOW' };
+    const dateStr = (d) => d ? new Date(d + 'T12:00:00').toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' }) : '';
+
+    list.innerHTML = findings.map((f, i) => `
+      <div class="finding-item" style="position:relative;">
+        <div class="finding-num">${String(i + 1).padStart(2, '0')}</div>
+        <div>
+          <div class="finding-title">${f.title}</div>
+          ${f.client ? `<div class="finding-desc" style="margin-bottom:6px;font-style:italic;font-size:13px;">${f.client}</div>` : ''}
+          ${f.desc ? `<div class="finding-desc">${f.desc}</div>` : ''}
+          ${f.date ? `<div class="finding-date">${dateStr(f.date)}</div>` : ''}
+        </div>
+        <div class="finding-severity sev-${f.severity}">
+          <span class="severity-dot"></span>${sevLabel[f.severity]}
+        </div>
+        <button class="finding-delete" onclick="deleteFinding(${f.id})" title="Remove">×</button>
+      </div>
+    `).join('');
+  }
+
+  
+  document.querySelectorAll('.service-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.paddingLeft = '16px';
+      item.style.transition = 'padding 0.25s ease';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.paddingLeft = '0';
+    });
+  });
+</script>
+</body>
+</html>
