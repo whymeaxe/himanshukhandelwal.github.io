@@ -3,12 +3,78 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Best Ethical Hacker in Rajasthan | Malware Analysis • Pentesting • OSINT | Portfolio</title>
+    <title>Himanshu Khandelwal — Ethical Hacker & Cybersecurity Researcher | Rajasthan, India</title>
+
+    <!-- ── SEO META ── -->
+    <meta name="description" content="Himanshu Khandelwal is an ethical hacker and cybersecurity researcher based in Rajasthan, India. Specializing in penetration testing, OSINT investigations, malware analysis, and scam recovery. Ranked 5th nationally in CTF.">
+    <meta name="keywords" content="Himanshu Khandelwal, ethical hacker Rajasthan, cybersecurity researcher India, penetration tester Rajasthan, OSINT investigator India, bug bounty hunter India, ethical hacker India, malware analyst, scam recovery specialist, CTF competitor India, best ethical hacker Rajasthan, Himanshu Khandelwal cybersecurity">
+    <meta name="author" content="Himanshu Khandelwal">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://himanshukhandelwal.in/">
+
+    <!-- ── OPEN GRAPH ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Himanshu Khandelwal — Ethical Hacker | Rajasthan, India">
+    <meta property="og:description" content="Ethical hacker, CTF top-5 nationally, malware analyst and scam recovery specialist based in Rajasthan, India.">
+    <meta property="og:url" content="https://himanshukhandelwal.in/">
+    <meta property="og:image" content="https://himanshukhandelwal.in/assets/og-image.jpg">
+    <meta property="og:site_name" content="Himanshu Khandelwal">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Himanshu Khandelwal — Ethical Hacker | Rajasthan, India">
+    <meta name="twitter:description" content="Ethical hacker, CTF top-5, OSINT & scam recovery specialist from Rajasthan, India.">
+    <meta name="twitter:image" content="https://himanshukhandelwal.in/assets/og-image.jpg">
+
+    <!-- ── JSON-LD STRUCTURED DATA ── -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://himanshukhandelwal.in/#person",
+                "name": "Himanshu Khandelwal",
+                "jobTitle": "Ethical Hacker & Cybersecurity Researcher",
+                "description": "Ethical hacker ranked 5th nationally in CTF, specializing in penetration testing, OSINT, malware analysis, and scam recovery.",
+                "url": "https://himanshukhandelwal.in",
+                "email": "himanshukhand3lwal@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "Rajasthan",
+                    "addressCountry": "IN"
+                },
+                "knowsAbout": [
+                    "Penetration Testing", "OSINT", "Malware Analysis",
+                    "Ethical Hacking", "Scam Recovery", "CTF", "Bug Bounty Hunting",
+                    "Red Team Operations", "Reverse Engineering"
+                ],
+                "sameAs": [
+                    "REPLACE_WITH_LINKEDIN_URL",
+                    "REPLACE_WITH_GITHUB_URL",
+                    "REPLACE_WITH_TWITTER_URL"
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://himanshukhandelwal.in/#service",
+                "name": "Himanshu Khandelwal — Cybersecurity Services",
+                "provider": { "@id": "https://himanshukhandelwal.in/#person" },
+                "areaServed": { "@type": "Country", "name": "India" },
+                "url": "https://himanshukhandelwal.in",
+                "serviceType": [
+                    "Penetration Testing", "Malware Analysis", "OSINT",
+                    "Red Team Operations", "Scam Recovery", "Security Hardening"
+                ]
+            }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
     <style>
         /* ══════════════════════════════════════
            DESIGN TOKENS — DARK (default)
+           ✅ Improved contrast for laptop readability
         ══════════════════════════════════════ */
         :root {
             --bg: #090907;
@@ -17,9 +83,9 @@
             --bg4: #1E1E1C;
             --rule: #252522;
             --rule2: #2E2E2B;
-            --muted: #474742;
-            --dim: #686860;
-            --mid: #94948A;
+            --muted: #6B6B62;
+            --dim: #8C8C80;
+            --mid: #A8A89C;
             --fg: #EDEAE4;
             --fg2: #D8D4CB;
             --fg3: #C4BFB4;
@@ -34,8 +100,11 @@
             --nav-border: rgba(255, 255, 255, 0.07);
             --toggle-bg: #1E1E1C;
             --toggle-border: #2E2E2B;
-            --toggle-dot: #686860;
+            --toggle-dot: #8C8C80;
             --toggle-icon-active: #EDEAE4;
+            --body-text: 12.5px;
+            --small-text: 9px;
+            --tiny-text: 8.5px;
         }
 
         [data-theme="light"] {
@@ -45,20 +114,23 @@
             --bg4: #D5CFC6;
             --rule: #CCC6BB;
             --rule2: #BCB5A8;
-            --muted: #8C8579;
-            --dim: #6B6560;
-            --mid: #4E4A46;
-            --fg: #242220;
-            --fg2: #3A3733;
-            --fg3: #504C48;
+            --muted: #5E5A54;
+            --dim: #4A4642;
+            --mid: #3A3733;
+            --fg: #1A1816;
+            --fg2: #2A2723;
+            --fg3: #3E3A36;
             --accent: #5A7A5A;
             --nav-glass: rgba(242, 238, 232, 0.90);
             --nav-blur: 28px;
             --nav-border: rgba(0, 0, 0, 0.08);
             --toggle-bg: #E1DCD4;
             --toggle-border: #BCB5A8;
-            --toggle-dot: #4E4A46;
-            --toggle-icon-active: #242220;
+            --toggle-dot: #3A3733;
+            --toggle-icon-active: #1A1816;
+            --body-text: 12.5px;
+            --small-text: 9px;
+            --tiny-text: 8.5px;
         }
 
         *,
@@ -76,6 +148,7 @@
             background: var(--bg);
             color: var(--fg);
             font-family: var(--mono);
+            font-size: var(--body-text);
             overflow-x: hidden;
             cursor: none;
             -webkit-font-smoothing: antialiased;
@@ -104,6 +177,18 @@
         }
         ul {
             list-style: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         #grain {
@@ -178,7 +263,7 @@
             flex-shrink: 0;
         }
         .theme-label {
-            font-size: 8px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--muted);
@@ -238,7 +323,7 @@
             pointer-events: none;
         }
         .toggle-icons span {
-            font-size: 9px;
+            font-size: var(--small-text);
             line-height: 1;
             transition: opacity .35s, transform .35s var(--ease);
         }
@@ -314,7 +399,7 @@
             gap: clamp(18px, 2.8vw, 44px);
         }
         .nav-centre a {
-            font-size: 9.5px;
+            font-size: 10px;
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--muted);
@@ -349,7 +434,7 @@
             flex-shrink: 0;
         }
         .nav-hire {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--fg);
@@ -491,7 +576,7 @@
             animation: ldFill 1.2s .15s var(--ease) forwards;
         }
         .ld-pct {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .25em;
             color: var(--dim);
             text-transform: uppercase;
@@ -656,7 +741,7 @@
             animation: rUp .9s .05s var(--ease) forwards;
         }
         .h-tag {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .28em;
             text-transform: uppercase;
             color: var(--muted);
@@ -673,7 +758,7 @@
             transition: background .6s;
         }
         .h-loc {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             color: var(--dim);
             text-transform: uppercase;
@@ -705,7 +790,7 @@
             flex-wrap: wrap;
         }
         .hero-sub {
-            font-size: 11.5px;
+            font-size: 12px;
             line-height: 2;
             color: var(--dim);
             max-width: min(430px, 100%);
@@ -723,7 +808,7 @@
             flex-wrap: wrap;
         }
         .btn-solid {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             background: var(--fg);
@@ -738,7 +823,7 @@
             transform: translateY(-2px);
         }
         .btn-line {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--mid);
@@ -785,7 +870,7 @@
             transition: color .6s;
         }
         .stl {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--muted);
@@ -819,7 +904,7 @@
             animation-play-state: paused;
         }
         .mq-item {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .22em;
             text-transform: uppercase;
             color: var(--muted);
@@ -856,7 +941,7 @@
             padding: 0 clamp(20px, 4.5vw, 72px);
         }
         .eyebrow {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .28em;
             text-transform: uppercase;
             color: var(--muted);
@@ -969,7 +1054,7 @@
             transition: color .6s;
         }
         .port-ph-cap {
-            font-size: 8px;
+            font-size: var(--tiny-text);
             letter-spacing: .25em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1010,14 +1095,14 @@
             transition: border-color .6s;
         }
         .amk {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .18em;
             text-transform: uppercase;
             color: var(--muted);
             transition: color .6s;
         }
         .amv {
-            font-size: 11.5px;
+            font-size: 12px;
             color: var(--fg);
             text-align: right;
             transition: color .6s;
@@ -1035,7 +1120,7 @@
             transition: color .6s;
         }
         .about-body {
-            font-size: 12px;
+            font-size: var(--body-text);
             line-height: 2;
             color: var(--dim);
             margin-bottom: 28px;
@@ -1072,7 +1157,7 @@
             transition: background .6s;
         }
         .ttl {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1085,7 +1170,7 @@
             gap: 3px;
         }
         .tl {
-            font-size: 11.5px;
+            font-size: 12px;
             line-height: 1.75;
         }
         .tp {
@@ -1128,7 +1213,7 @@
             margin-top: 32px;
         }
         .pill {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .18em;
             text-transform: uppercase;
             color: var(--dim);
@@ -1155,7 +1240,7 @@
             flex-wrap: wrap;
         }
         .svc-note {
-            font-size: 11.5px;
+            font-size: 12px;
             line-height: 1.9;
             color: var(--dim);
             max-width: 340px;
@@ -1197,7 +1282,7 @@
             z-index: 1;
         }
         .sn {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .18em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1214,7 +1299,7 @@
             color: var(--fg);
         }
         .stg {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .15em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1248,7 +1333,7 @@
             margin-bottom: clamp(44px, 7vh, 104px);
         }
         .cases-note {
-            font-size: 11.5px;
+            font-size: 12px;
             line-height: 2;
             color: var(--dim);
             transition: color .6s;
@@ -1289,7 +1374,7 @@
             z-index: 1;
         }
         .cnum {
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .18em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1298,7 +1383,7 @@
         }
         .csev {
             display: inline-block;
-            font-size: 7.5px;
+            font-size: 8px;
             letter-spacing: .2em;
             text-transform: uppercase;
             padding: 3px 9px;
@@ -1332,7 +1417,7 @@
             color: var(--fg);
         }
         .cdesc {
-            font-size: 11px;
+            font-size: 11.5px;
             line-height: 1.9;
             color: var(--muted);
             transition: color .6s;
@@ -1352,7 +1437,7 @@
             transform: translate(3px, -3px);
         }
         .cyr {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .15em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1459,7 +1544,7 @@
             transform: scale(1.08);
         }
         .tc-ph-lbl {
-            font-size: 8px;
+            font-size: var(--tiny-text);
             letter-spacing: .22em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1489,7 +1574,7 @@
             padding: clamp(20px, 3vw, 36px);
         }
         .tc-handle {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--muted);
@@ -1504,7 +1589,7 @@
             transition: color .6s;
         }
         .tc-role {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--dim);
@@ -1512,7 +1597,7 @@
             transition: color .6s;
         }
         .tc-bio {
-            font-size: 10.5px;
+            font-size: 11px;
             line-height: 1.9;
             color: var(--muted);
             transition: color .6s;
@@ -1531,125 +1616,6 @@
         }
         .tc-card:hover::after {
             transform: scaleX(1);
-        }
-
-        #companies {
-            background: var(--bg);
-            transition: background .6s;
-        }
-        .companies-hdr {
-            margin-bottom: clamp(44px, 6vh, 80px);
-        }
-        .companies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-            gap: 1px;
-            background: var(--rule);
-            transition: background .6s;
-            margin-bottom: clamp(44px, 6vh, 80px);
-        }
-        .org-card {
-            background: var(--bg);
-            padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            position: relative;
-            overflow: hidden;
-            transition: background .4s;
-            min-height: 160px;
-            text-align: center;
-        }
-        .org-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--bg2);
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform .42s var(--ease), background .6s;
-            z-index: 0;
-        }
-        .org-card:hover::before {
-            transform: scaleY(1);
-        }
-        .org-card>* {
-            position: relative;
-            z-index: 1;
-        }
-        .org-logo-wrap {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            background: var(--bg3);
-            border: 1px solid var(--rule2);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background .6s, border-color .6s, transform .4s var(--ease);
-        }
-        .org-card:hover .org-logo-wrap {
-            transform: translateY(-3px);
-            border-color: var(--mid);
-        }
-        .org-logo-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .org-logo-letter {
-            font-family: var(--serif);
-            font-size: 28px;
-            color: var(--mid);
-            line-height: 1;
-            transition: color .6s;
-        }
-        .org-logo-upload {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .org-logo-wrap:hover::after {
-            content: '＋';
-            position: absolute;
-            font-size: 18px;
-            color: rgba(255, 255, 255, .6);
-            background: rgba(0, 0, 0, .5);
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-        .org-name {
-            font-family: var(--serif);
-            font-size: clamp(14px, 1.6vw, 18px);
-            font-weight: 400;
-            letter-spacing: -.01em;
-            transition: color .3s;
-        }
-        .org-card:hover .org-name {
-            color: var(--fg);
-        }
-        .org-role {
-            font-size: 8px;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            color: var(--muted);
-            transition: color .6s;
-        }
-        .org-year {
-            font-size: 8px;
-            letter-spacing: .18em;
-            color: var(--dim);
-            text-transform: uppercase;
-            transition: color .6s;
         }
 
         #contact {
@@ -1697,14 +1663,14 @@
             gap: 3px;
         }
         .clk {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--muted);
             transition: color .6s;
         }
         .clv {
-            font-size: 13px;
+            font-size: 13.5px;
             color: var(--fg);
             transition: color .6s;
         }
@@ -1731,7 +1697,7 @@
             border: none;
             outline: none;
             font-family: var(--mono);
-            font-size: 13px;
+            font-size: 13.5px;
             color: var(--fg);
             padding: 28px 0 12px;
             transition: color .6s;
@@ -1740,7 +1706,7 @@
             position: absolute;
             top: 18px;
             left: 0;
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .22em;
             text-transform: uppercase;
             color: var(--muted);
@@ -1762,7 +1728,7 @@
             align-items: center;
             gap: 12px;
             margin-top: 36px;
-            font-size: 9px;
+            font-size: var(--small-text);
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--fg);
@@ -1794,7 +1760,7 @@
         }
         .f-id,
         .f-copy {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .18em;
             color: var(--muted);
             text-transform: uppercase;
@@ -1806,7 +1772,7 @@
             flex-wrap: wrap;
         }
         .f-links a {
-            font-size: 8.5px;
+            font-size: var(--tiny-text);
             letter-spacing: .15em;
             text-transform: uppercase;
             color: var(--muted);
@@ -1835,9 +1801,6 @@
                 display: none;
             }
             .team-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .companies-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
@@ -1889,9 +1852,6 @@
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .companies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -1909,9 +1869,6 @@
         @media(max-width:560px) {
             .team-grid {
                 grid-template-columns: 1fr;
-            }
-            .companies-grid {
-                grid-template-columns: repeat(2, 1fr);
             }
             .hero-h1 {
                 font-size: clamp(40px, 11vw, 68px);
@@ -1936,9 +1893,6 @@
             }
         }
         @media(max-width:380px) {
-            .companies-grid {
-                grid-template-columns: 1fr;
-            }
             .hero-stats {
                 grid-template-columns: 1fr 1fr;
             }
@@ -2011,23 +1965,23 @@
     <div id="cur" aria-hidden="true"></div>
     <div id="cur-ring" aria-hidden="true"></div>
 
-    <div id="mob-menu" aria-hidden="true" aria-label="Navigation">
+    <div id="mob-menu" aria-hidden="true" aria-label="Mobile Navigation Menu">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#findings">Findings</a>
         <a href="#team">Team</a>
-        <a href="#companies">Companies</a>
+        <a href="blog.html">Blog</a>
         <a href="#contact">Contact</a>
     </div>
 
-    <nav id="nav">
-        <span class="nav-logo"><b>CYBER</b>.SEC</span>
+    <nav id="nav" aria-label="Primary Navigation">
+        <span class="nav-logo"><b>HIMANSHU</b>.KH</span>
         <ul class="nav-centre">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#findings">Findings</a></li>
             <li><a href="#team">Team</a></li>
-            <li><a href="#companies">Companies</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-right">
@@ -2051,7 +2005,7 @@
         </div>
     </nav>
 
-    <section id="hero">
+    <section id="hero" aria-label="Hero">
         <div class="hero-orb" aria-hidden="true"></div>
         <div class="hero-orb2" aria-hidden="true"></div>
         <div class="hero-particle hp1" aria-hidden="true"></div>
@@ -2063,11 +2017,12 @@
             <div class="h-eyebrow">
                 <span class="h-tag">Cybersecurity Researcher</span>
                 <span class="h-rule"></span>
-                <span class="h-loc">India — Available Globally</span>
+                <span class="h-loc">Rajasthan, India — Available Globally</span>
             </div>
             <h1 class="hero-h1">
                 Breaking Systems<br>
                 <span class="it">To Protect Them.</span>
+                <span class="sr-only">— Himanshu Khandelwal, Ethical Hacker, Rajasthan</span>
             </h1>
             <div class="hero-sub-row">
                 <p class="hero-sub">
@@ -2121,19 +2076,19 @@
         </div>
     </div>
 
-    <section id="about" class="sec">
+    <section id="about" class="sec" aria-label="About Himanshu Khandelwal">
         <div class="wrap">
             <p class="eyebrow rv">Introduction</p>
             <div class="about-grid">
                 <div class="about-left rv">
                     <div class="portrait">
                         <div class="port-ph">
-                            <div class="port-ph-letter">Y</div>
+                            <div class="port-ph-letter">H</div>
                             <div class="port-ph-cap">// Add Your Photo</div>
                         </div>
                     </div>
                     <div class="am-grid">
-                        <div class="am-row"><span class="amk">Location</span><span class="amv">India</span></div>
+                        <div class="am-row"><span class="amk">Location</span><span class="amv">Rajasthan, India</span></div>
                         <div class="am-row"><span class="amk">CTF Rank</span><span class="amv">5th National</span></div>
                         <div class="am-row"><span class="amk">Speciality</span><span class="amv">Web · OSINT · RE</span></div>
                         <div class="am-row"><span class="amk">Status</span><span class="amv">Open to Engagements</span></div>
@@ -2142,7 +2097,7 @@
                 </div>
                 <div>
                     <p class="about-intro rv">
-                        I turn <em>adversarial thinking</em> into protection for systems and people that cannot afford to be compromised.
+                        Himanshu Khandelwal is a Rajasthan-based ethical hacker who turns <em>adversarial thinking</em> into protection for systems and people that cannot afford to be compromised.
                     </p>
                     <p class="about-body rv">
                         Ranked <b>5th nationally</b> in Capture The Flag competitions, I've spent years mastering web exploitation, binary reverse engineering, deep-layer OSINT, and social engineering analysis. My work isn't theoretical — it's deployed in <b>real engagements</b> against real adversaries.
@@ -2180,7 +2135,7 @@
         </div>
     </section>
 
-    <section id="services" class="sec">
+    <section id="services" class="sec" aria-label="Cybersecurity Services">
         <div class="wrap">
             <div class="svc-hdr">
                 <div>
@@ -2200,7 +2155,7 @@
         </div>
     </section>
 
-    <section id="findings" class="sec">
+    <section id="findings" class="sec" aria-label="Notable Findings & Research">
         <div class="wrap">
             <div class="cases-top">
                 <div>
@@ -2220,7 +2175,7 @@
         </div>
     </section>
 
-    <section id="team" class="sec">
+    <section id="team" class="sec" aria-label="Team & Collaborators">
         <div class="wrap">
             <div class="team-hdr">
                 <p class="eyebrow rv">Collaborations</p>
@@ -2229,23 +2184,23 @@
             <div class="team-grid">
 
                 <div class="tc-card rv d1">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile — Himanshu Khandelwal">
                         <div class="tc-ph">
-                            <div class="tc-ph-icon">Y</div>
+                            <div class="tc-ph-icon">H</div>
                             <div class="tc-ph-lbl">View Profile</div>
                         </div>
                         <span class="tc-img-link-icon">↗ Open</span>
                     </a>
                     <div class="tc-body">
                         <div class="tc-handle">// Founder</div>
-                        <div class="tc-name">Your Name</div>
+                        <div class="tc-name">Himanshu Khandelwal</div>
                         <div class="tc-role">Lead Researcher · Founder</div>
                         <div class="tc-bio">5th nationally ranked CTF competitor. Web exploitation, OSINT, malware analysis, anti-scam operations. The origin of this mission.</div>
                     </div>
                 </div>
 
                 <div class="tc-card rv d2">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile">
                         <div class="tc-ph">
                             <div class="tc-ph-icon">R</div>
                             <div class="tc-ph-lbl">View Profile</div>
@@ -2261,7 +2216,7 @@
                 </div>
 
                 <div class="tc-card rv d3">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile">
                         <div class="tc-ph">
                             <div class="tc-ph-icon">K</div>
                             <div class="tc-ph-lbl">View Profile</div>
@@ -2277,7 +2232,7 @@
                 </div>
 
                 <div class="tc-card rv d4">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile">
                         <div class="tc-anon"><span class="tc-anon-ico">👤</span></div>
                         <span class="tc-img-link-icon">↗ Open</span>
                     </a>
@@ -2290,7 +2245,7 @@
                 </div>
 
                 <div class="tc-card rv d5">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile">
                         <div class="tc-anon"><span class="tc-anon-ico">👤</span></div>
                         <span class="tc-img-link-icon">↗ Open</span>
                     </a>
@@ -2303,7 +2258,7 @@
                 </div>
 
                 <div class="tc-card rv d6">
-                    <a href="#" class="tc-img" title="View profile">
+                    <a href="#" class="tc-img" title="View Profile">
                         <div class="tc-ph">
                             <div class="tc-ph-icon">A</div>
                             <div class="tc-ph-lbl">View Profile</div>
@@ -2322,75 +2277,7 @@
         </div>
     </section>
 
-    <section id="companies" class="sec">
-        <div class="wrap">
-            <div class="companies-hdr">
-                <p class="eyebrow rv">Partnerships &amp; Engagements</p>
-                <h2 class="sec-h rv">Companies I've<br><span class="it">Worked With</span></h2>
-            </div>
-            <div class="companies-grid">
-                <div class="org-card rv d1">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">A</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">Acme Corp</div>
-                    <div class="org-role">Penetration Test</div>
-                    <div class="org-year">2025</div>
-                </div>
-                <div class="org-card rv d2">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">S</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">SecureBank Ltd</div>
-                    <div class="org-role">Red Team Operation</div>
-                    <div class="org-year">2025</div>
-                </div>
-                <div class="org-card rv d3">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">G</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">GovSec Agency</div>
-                    <div class="org-role">OSINT Investigation</div>
-                    <div class="org-year">2024</div>
-                </div>
-                <div class="org-card rv d4">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">N</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">NexGen Fintech</div>
-                    <div class="org-role">Anti-Fraud Ops</div>
-                    <div class="org-year">2024</div>
-                </div>
-                <div class="org-card rv d5">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">T</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">TechStack Inc</div>
-                    <div class="org-role">Security Audit</div>
-                    <div class="org-year">2024</div>
-                </div>
-                <div class="org-card rv d6">
-                    <div class="org-logo-wrap" title="Click to upload logo">
-                        <div class="org-logo-letter">D</div>
-                        <input type="file" accept="image/*" class="org-logo-upload" onchange="handleOrgLogo(this)">
-                    </div>
-                    <div class="org-name">DefendX Labs</div>
-                    <div class="org-role">Malware Analysis</div>
-                    <div class="org-year">2023</div>
-                </div>
-            </div>
-            <p class="rv" style="font-size:10px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;text-align:center;padding-top:clamp(20px,3vh,36px)">
-                Names anonymised where NDAs apply — available on request
-            </p>
-        </div>
-    </section>
-
-    <section id="contact" class="sec">
+    <section id="contact" class="sec" aria-label="Contact Himanshu Khandelwal">
         <div class="wrap">
             <p class="eyebrow rv">Let's Connect</p>
             <div class="contact-grid">
@@ -2399,9 +2286,9 @@
                         Discuss your<br><em>security</em><br>requirements.
                     </h2>
                     <div class="rv">
-                        <div class="clr"><div class="cleft"><span class="clk">Email</span><span class="clv">you@domain.com</span></div><span class="clarr">↗</span></div>
-                        <div class="clr"><div class="cleft"><span class="clk">Twitter / X</span><span class="clv">@yourhandle</span></div><span class="clarr">↗</span></div>
-                        <div class="clr"><div class="cleft"><span class="clk">LinkedIn</span><span class="clv">linkedin.com/in/you</span></div><span class="clarr">↗</span></div>
+                        <div class="clr"><div class="cleft"><span class="clk">Email</span><span class="clv">himanshukhand3lwal@gmail.com</span></div><span class="clarr">↗</span></div>
+                        <div class="clr"><div class="cleft"><span class="clk">Twitter / X</span><span class="clv">@hkhndlwal</span></div><span class="clarr">↗</span></div>
+                        <div class="clr"><div class="cleft"><span class="clk">LinkedIn</span><span class="clv">linkedin.com/in/himanshukhandelwal</span></div><span class="clarr">↗</span></div>
                         <div class="clr"><div class="cleft"><span class="clk">PGP Key</span><span class="clv" style="font-size:11px;letter-spacing:.04em">0x1A2B3C4D5E6F</span></div><span class="clarr">↗</span></div>
                     </div>
                 </div>
@@ -2422,15 +2309,15 @@
         </div>
     </section>
 
-    <footer>
-        <span class="f-id">SEC.PORT © 2025</span>
-        <span class="f-copy">Strategic Cyber Defense — Built with conviction</span>
+    <footer aria-label="Site Footer">
+        <span class="f-id">© 2025 Himanshu Khandelwal — Strategic Cyber Defense</span>
+        <span class="f-copy">Built with conviction</span>
         <div class="f-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#findings">Research</a>
             <a href="#team">Team</a>
-            <a href="#companies">Companies</a>
+            <a href="blog.html">Blog</a>
             <a href="#contact">Contact</a>
         </div>
     </footer>
@@ -2491,14 +2378,14 @@
             ring.style.top = ry + 'px';
             requestAnimationFrame(tick);
         })();
-        document.querySelectorAll('a,button,.svc-row,.ci,.tc-card,.clr,.org-card,.pill').forEach(el => {
+        document.querySelectorAll('a,button,.svc-row,.ci,.tc-card,.clr,.pill').forEach(el => {
             el.addEventListener('mouseenter', () => document.body.classList.add('cur-xl'));
             el.addEventListener('mouseleave', () => document.body.classList.remove('cur-xl'));
         });
 
         const nav = document.getElementById('nav');
         const navAs = document.querySelectorAll('.nav-centre a');
-        const sections = ['about', 'services', 'findings', 'team', 'companies', 'contact'];
+        const sections = ['about', 'services', 'findings', 'team', 'contact'];
         window.addEventListener('scroll', () => {
             nav.classList.toggle('stuck', window.scrollY > 50);
             let cur2 = '';
@@ -2506,7 +2393,12 @@
                 const s = document.getElementById(id);
                 if (s && window.scrollY >= s.offsetTop - 120) cur2 = id;
             });
-            navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur2));
+            navAs.forEach(a => {
+                const href = a.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    a.classList.toggle('active', href === '#' + cur2);
+                }
+            });
         }, { passive: true });
 
         const ham = document.getElementById('ham'),
@@ -2536,7 +2428,8 @@
             const y = (e.clientY / window.innerHeight - .5) * 38;
             orb.style.transform = `translate(calc(-50% + ${x}px),calc(-50% + ${y}px))`;
             if (orb2) {
-                orb2.style.transform = `translate(calc(-50% + ${x*0.5}px),calc(-50% + ${y*0.5}px))`;
+                orb2.style.transform =
+                `translate(calc(-50% + ${x*0.5}px),calc(-50% + ${y*0.5}px))`;
             }
         }, { passive: true });
 
@@ -2579,24 +2472,6 @@
                     '<span>Sent Successfully</span><span class="send-line" style="background:#7A9E78;width:50px"></span><span style="color:#7A9E78">✓</span>';
                 btn.style.opacity = '1';
             }, 1900);
-        }
-
-        function handleOrgLogo(input) {
-            if (!input.files || !input.files[0]) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const wrap = input.closest('.org-logo-wrap');
-                const letter = wrap.querySelector('.org-logo-letter');
-                let img = wrap.querySelector('img');
-                if (!img) {
-                    img = document.createElement('img');
-                    img.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:50%;';
-                    wrap.insertBefore(img, wrap.firstChild);
-                }
-                img.src = e.target.result;
-                if (letter) letter.style.display = 'none';
-            };
-            reader.readAsDataURL(input.files[0]);
         }
     </script>
 </body>
