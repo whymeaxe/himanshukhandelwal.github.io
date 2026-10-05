@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://himanshukhandelwal.in/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://himanshukhandelwal.in/assets/og-image.jpg</image:loc><image:title>Himanshu Khandelwal: website services and web design</image:title></image:image>
+    <image:image><image:loc>https://himanshukhandelwal.in/assets/shots/brandcrafters.webp</image:loc><image:title>BrandCrafters website preview</image:title></image:image>
+    <image:image><image:loc>https://himanshukhandelwal.in/assets/shots/embassy.webp</image:loc><image:title>Embassy of Education website preview</image:title></image:image>
+    <image:image><image:loc>https://himanshukhandelwal.in/assets/shots/haviella.webp</image:loc><image:title>Haviella Homes website preview</image:title></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://himanshukhandelwal.in/assets/reel-poster.jpg</video:thumbnail_loc>
+      <video:title>Why choose Himanshu Khandelwal for your website</video:title>
+      <video:description>A 60-second motion graphics reel explaining why businesses choose Himanshu Khandelwal for website design, development and automation.</video:description>
+      <video:content_loc>https://himanshukhandelwal.in/assets/reel-1080.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-10-06</video:publication_date>
+    </video:video>
+  </url>
+  <url><loc>https://himanshukhandelwal.in/privacy.html</loc><lastmod>2026-10-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://himanshukhandelwal.in/terms.html</loc><lastmod>2026-10-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
